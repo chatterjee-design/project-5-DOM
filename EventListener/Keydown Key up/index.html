@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key down/up </title>
+    <style>
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            font-size: 2rem;
+        }
+        button{
+            padding: 16px 10px;
+            font-size: 20px;
+            background-color: #dcf8f8;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <main id="main">
+        <h1 id="heading">Key down/up</h1>
+        <button id="btn">Press Any Key</button>
+    </main>
+</body>
+<script>
+let main = document.querySelector('#main');
+ let btn = document.getElementById("btn");
+ let heading = document.getElementById("heading")
+document.addEventListener("keydown", function (e) {
+    btn.style.background="#f9a1c7" ;
+   main.style.background= "#feebfc" ;
+   btn.innerText= e.key + " is pressed (Keydown)";
+   heading.innerText= "This is Keydown";
+});
+document.addEventListener("keyup", function (e) {
+    btn.style.background="#af7bf4" ;
+   main.style.background= "#decdf6" ;
+   btn.innerText= e.key + " is pressed (Keyup)";
+   heading.innerText= "This is Keyup";
+});
+</script>
+</html>

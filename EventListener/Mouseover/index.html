@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover button</title>
+    <style>
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            font-size: 2rem;
+        }
+        button{
+            padding: 16px 10px;
+            font-size: 20px;
+            background-color: #f48b4a;
+            background-color: #f0ffff;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <main id="main">
+        <h1>Mouse over Button</h1>
+        <button id="btn">Mouse over</button>
+    </main>
+</body>
+<script>
+    let btn = document.querySelector('#btn');
+    let main = document.querySelector('#main');
+    btn.addEventListener('mouseover',function(){
+       btn.style.backgroundColor = "#f48b4a"
+        main.style.backgroundColor = "#f9d6b8";
+    })
+</script>
+</html>
